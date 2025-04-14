@@ -8,7 +8,8 @@ const Poster: React.FC = () => {
         <div className="w-full border-b-2 border-black p-4">
           <iframe 
             src="/halftone_animation_640x360_6fps_final.html" 
-            className="w-full h-64 border-0"
+            className="w-full h-64 border-0 block"
+            style={{ overflow: 'hidden' }}
             title="Halftone Animation"
           ></iframe>
         </div>
