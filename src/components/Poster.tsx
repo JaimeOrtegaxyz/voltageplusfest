@@ -6,11 +6,13 @@ const Poster: React.FC = () => {
       <div className="w-full max-w-[900px] mx-auto bg-[#f5f5f5]">
         {/* Pixelated DIALEKTIK logo */}
         <div className="w-full border-b-2 border-black p-4">
-          <iframe 
-            src="/halftone_animation_640x360_6fps_final.html" 
-            className="w-full h-64 border-0"
-            title="Halftone Animation"
-          ></iframe>
+          <div className="relative w-full" style={{ paddingBottom: "56.25%" }}> {/* 16:9 aspect ratio container */}
+            <iframe 
+              src="/halftone_animation_640x360_6fps_final.html" 
+              className="absolute top-0 left-0 w-full h-full border-0 object-cover"
+              title="Halftone Animation"
+            ></iframe>
+          </div>
         </div>
 
         {/* White space */}
