@@ -1,14 +1,18 @@
+
 import React from "react";
+import { useIsMobile } from "../hooks/use-mobile";
 
 const Poster: React.FC = () => {
+  const isMobile = useIsMobile();
+
   return (
     <div className="flex justify-center items-center min-h-screen bg-black">
       <div className="w-full max-w-[900px] mx-auto bg-[#f5f5f5]">
         {/* Pixelated DIALEKTIK logo */}
-        <div className="w-full border-b-2 border-black p-4">
+        <div className="w-full border-b-2 border-black">
           <iframe 
             src="/halftone_animation_640x360_6fps_final.html" 
-            className="w-full h-64 border-0"
+            className={`w-full border-0 ${isMobile ? 'h-[180px]' : 'h-[360px]'}`}
             title="Halftone Animation"
           ></iframe>
         </div>
