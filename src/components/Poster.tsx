@@ -1,18 +1,13 @@
-
 import React from "react";
-
 const Poster: React.FC = () => {
-  return (
-    <div className="flex justify-center items-center min-h-screen bg-black">
+  return <div className="flex justify-center items-center min-h-screen bg-black">
       <div className="w-full max-w-[900px] mx-auto bg-[#f5f5f5]">
         {/* Pixelated DIALEKTIK logo */}
         <div className="w-full border-b-2 border-black p-4">
-          <div className="relative w-full" style={{ paddingBottom: "56.25%" }}> {/* 16:9 aspect ratio container */}
-            <iframe 
-              src="/halftone_animation_640x360_6fps_final.html" 
-              className="absolute top-0 left-0 w-full h-full border-0 object-cover"
-              title="Halftone Animation"
-            ></iframe>
+          <div className="relative w-full" style={{
+          paddingBottom: "56.25%"
+        }}> {/* 16:9 aspect ratio container */}
+            <iframe src="/halftone_animation_640x360_6fps_final.html" className="absolute top-0 left-0 w-full h-full border-0 object-cover" title="Halftone Animation"></iframe>
           </div>
         </div>
 
@@ -29,7 +24,7 @@ const Poster: React.FC = () => {
           {/* Table */}
           <div className="border-2 border-black">
             <div className="grid grid-cols-3 border-b-2 border-black">
-              <div className="p-2 border-r-2 border-black">
+              <div className="p-2 border-r-2 border-black px-[8px] py-0">
                 <div className="text-3xl font-bold">VOLTAGE</div>
                 <div className="text-3xl font-bold">NIGHT</div>
                 <div className="text-3xl font-bold">CDMX</div>
@@ -70,7 +65,9 @@ const Poster: React.FC = () => {
                   <div className="w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-xs">LOGO</div>
                 </span>
                 <div className="flex-grow flex items-center">
-                  <div className="w-full h-4 bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgAgMAAABXJHGjAAAACVBMVEX///8AAAAAAABoyjxuAAAAAnRSTlMA/1uRIrUAAAAbSURBVCiRY2AgCbDBGEoMr3ACTAwj3oD+DgAf5A6APwJ+CAAAAABJRU5ErkJggg==')" }}></div>
+                  <div className="w-full h-4 bg-contain bg-no-repeat bg-center" style={{
+                  backgroundImage: "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgAgMAAABXJHGjAAAACVBMVEX///8AAAAAAABoyjxuAAAAAnRSTlMA/1uRIrUAAAAbSURBVCiRY2AgCbDBGEoMr3ACTAwj3oD+DgAf5A6APwJ+CAAAAABJRU5ErkJggg==')"
+                }}></div>
                 </div>
               </div>
               <div className="grid grid-cols-2">
@@ -101,8 +98,6 @@ const Poster: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Poster;
