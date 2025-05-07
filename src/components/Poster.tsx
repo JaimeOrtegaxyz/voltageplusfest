@@ -1,10 +1,12 @@
-
 import React from "react";
 
 const Poster: React.FC = () => {
-  // Use window.location.origin to get the base URL of the site
-  // This ensures the iframe src will work in any environment (local, Vercel, etc.)
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  /*
+   * The animation HTML sits in /public so it is copied verbatim to the
+   * build output and is always available at the site root.  We can therefore
+   * reference it with an absolute URL that starts with "/"
+   */
+  const iframeSrc = "/halftone_animation_640x360_6fps_final.html";
   
   return <div className="flex justify-center items-center min-h-screen bg-black">
       <div className="w-full max-w-[900px] mx-auto bg-[#f5f5f5]">
@@ -13,7 +15,7 @@ const Poster: React.FC = () => {
           <div className="relative w-full" style={{
           paddingBottom: "56.25%"
         }}> {/* 16:9 aspect ratio container */}
-            <iframe src={`${baseUrl}/halftone_animation_640x360_6fps_final.html`} className="absolute top-0 left-0 w-full h-full border-0 object-cover" title="Halftone Animation"></iframe>
+            <iframe src={iframeSrc} className="absolute top-0 left-0 w-full h-full border-0 object-cover" title="Halftone Animation" />
           </div>
         </div>
 
