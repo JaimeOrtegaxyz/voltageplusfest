@@ -1,3 +1,4 @@
+
 import React from "react";
 const Poster: React.FC = () => {
   return <div className="flex justify-center items-center min-h-screen bg-black">
@@ -7,7 +8,7 @@ const Poster: React.FC = () => {
           <div className="relative w-full" style={{
           paddingBottom: "56.25%"
         }}> {/* 16:9 aspect ratio container */}
-            <iframe src="/halftone_animation_640x360_6fps_final.html" className="absolute top-0 left-0 w-full h-full border-0 object-cover" title="Halftone Animation"></iframe>
+            <iframe src="./halftone_animation_640x360_6fps_final.html" className="absolute top-0 left-0 w-full h-full border-0 object-cover" title="Halftone Animation"></iframe>
           </div>
         </div>
 
