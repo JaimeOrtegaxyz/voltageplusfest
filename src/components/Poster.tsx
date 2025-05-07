@@ -1,4 +1,5 @@
 import React from "react";
+import { Separator } from "./ui/separator";
 
 const Poster: React.FC = () => {
   /*
@@ -8,7 +9,8 @@ const Poster: React.FC = () => {
    */
   const iframeSrc = "/halftone_animation_640x360_6fps_final.html";
   
-  return <div className="flex justify-center items-center min-h-screen bg-black">
+  return (
+    <div className="flex justify-center items-center min-h-screen bg-black">
       <div className="w-full max-w-[900px] mx-auto bg-[#f5f5f5]">
         {/* Pixelated DIALEKTIK logo */}
         <div className="w-full border-b-2 border-black p-4">
@@ -19,94 +21,63 @@ const Poster: React.FC = () => {
           </div>
         </div>
 
-        {/* White space */}
-        <div className="w-full h-80 bg-[#f5f5f5]"></div>
+        {/* New minimalist design content */}
+        <div className="p-8 md:p-12">
+          {/* VOLTAGE CDMX Header */}
+          <div className="mb-8">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight">VOLTAGE</h1>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">CDMX</h2>
+          </div>
 
-        {/* Description text */}
-        <div className="p-4 text-sm leading-tight">
-          <p className="mb-4">
-            VOLTAGE es una noche dedicada a la música electrónica experimental en la Ciudad de México. Reunimos a los mejores artistas locales e internacionales para presentar sonidos innovadores que abarcan techno, ambient, y electrónica experimental. Con visuales impactantes y un sistema de sonido inmersivo, creamos una experiencia única para los verdaderos amantes de la música electrónica.
-            <span className="float-right">→</span>
-          </p>
+          <Separator className="h-[2px] bg-black mb-6" />
 
-          {/* Table */}
-          <div className="border-2 border-black">
-            <div className="grid grid-cols-3 border-b-2 border-black">
-              <div className="p-2 border-r-2 border-black px-[8px] py-0">
-                <div className="text-3xl font-bold">VOLTAGE</div>
-                <div className="text-3xl font-bold">NIGHT</div>
-                <div className="text-3xl font-bold">CDMX</div>
-              </div>
-              <div>
-                <div className="grid grid-cols-2 border-b-2 border-black">
-                  <div className="p-2 border-r-2 border-black">MURCOF</div>
-                  <div className="p-2">LIVE</div>
-                </div>
-                <div className="grid grid-cols-2 border-b-2 border-black">
-                  <div className="p-2 border-r-2 border-black">FJAAK</div>
-                  <div className="p-2">LIVE</div>
-                </div>
-                <div className="grid grid-cols-2">
-                  <div className="p-2 border-r-2 border-black">DEBIT</div>
-                  <div className="p-2">DJ SET</div>
-                </div>
-              </div>
-              <div>
-                <div className="p-2 border-b-2 border-black">MX</div>
-                <div className="p-2 border-b-2 border-black">DE</div>
-                <div className="p-2">MX</div>
-              </div>
+          {/* Electronic music night */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div>
+              <h3 className="text-3xl md:text-4xl font-bold">electronic</h3>
+              <h3 className="text-3xl md:text-4xl font-bold">music</h3>
+              <h3 className="text-3xl md:text-4xl font-bold">night</h3>
             </div>
             
-            <div className="grid grid-cols-1 border-b-2 border-black">
-              <div className="p-2 text-center">
-                ↑ ↑ ↑ ↑ APOYADO POR NAAFI COLECTIVO ↑ ↑ ↑ ↑
+            <div className="space-y-2">
+              {/* Artist lineup */}
+              <div className="flex justify-between">
+                <span className="font-bold text-lg md:text-xl">MURCOF</span>
+                <span className="text-lg md:text-xl">LIVE</span>
               </div>
-            </div>
-            
-            <div className="grid grid-cols-3">
-              <div className="p-2 flex border-r-2 border-black">
-                <span className="mr-2">
-                  <div className="w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-xs">LOGO</div>
-                </span>
-                <span className="mr-2">
-                  <div className="w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-xs">LOGO</div>
-                </span>
-                <div className="flex-grow flex items-center">
-                  <div className="w-full h-4 bg-contain bg-no-repeat bg-center" style={{
-                  backgroundImage: "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgAgMAAABXJHGjAAAACVBMVEX///8AAAAAAABoyjxuAAAAAnRSTlMA/1uRIrUAAAAbSURBVCiRY2AgCbDBGEoMr3ACTAwj3oD+DgAf5A6APwJ+CAAAAABJRU5ErkJggg==')"
-                }}></div>
-                </div>
+              <Separator className="h-[1px] bg-black" />
+              
+              <div className="flex justify-between">
+                <span className="font-bold text-lg md:text-xl">FJAAK</span>
+                <span className="text-lg md:text-xl">DE</span>
               </div>
-              <div className="grid grid-cols-2">
-                <div className="p-2 border-r-2 border-black">
-                  <div>DESDE 23:00H</div>
-                  <div>HASTA 5:00H</div>
-                </div>
-                <div className="p-2">
-                  <div>FORO</div>
-                  <div>NORMANDIE</div>
-                </div>
-              </div>
-              <div className="p-2">
-                Insurgentes Sur 701<br />
-                06170 Ciudad de México
+              <Separator className="h-[1px] bg-black" />
+              
+              <div className="flex justify-between">
+                <span className="font-bold text-lg md:text-xl">DEBIT</span>
+                <span className="text-lg md:text-xl">MX</span>
               </div>
             </div>
           </div>
 
-          {/* Bottom boxes */}
-          <div className="grid grid-cols-2 mt-4">
-            <div className="border-2 border-black p-2">
-              <div className="text-4xl font-bold">VOLTAGE</div>
-            </div>
-            <div className="border-2 border-black p-2">
-              <div className="text-4xl font-bold">16.08.2025</div>
-            </div>
+          <Separator className="h-[2px] bg-black mb-6" />
+
+          {/* Time and venue */}
+          <div className="flex justify-between items-center mb-6">
+            <div className="text-3xl md:text-4xl font-bold">23:00</div>
+            <div className="text-xl md:text-2xl font-bold">FORO NORMANDIE</div>
+          </div>
+
+          <Separator className="h-[2px] bg-black mb-6" />
+
+          {/* Date */}
+          <div className="flex justify-center">
+            <div className="text-4xl md:text-5xl lg:text-6xl font-bold">16.08.2025</div>
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
 
 export default Poster;
