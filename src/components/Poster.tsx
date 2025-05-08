@@ -48,8 +48,8 @@ const Poster: React.FC = () => {
         <div>
           {/* VOLTAGE CDMX Header - align padding with content below */}
           <div className="px-8 md:px-12 py-8 mb-0">
-            <h1 className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-bold tracking-tight leading-none w-full">VOLTAGE</h1>
-            <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-[8rem] font-bold tracking-tight leading-none w-full">CDMX</h2>
+            <h1 className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-bold tracking-tight leading-none w-full">VOLTAGE+</h1>
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] font-bold tracking-tight leading-none w-full">CDMX</h2>
           </div>
           
           {/* Rest of content with normal padding */}
@@ -89,15 +89,8 @@ const Poster: React.FC = () => {
 
             {/* Time and venue */}
             <div className="flex justify-between items-center mb-6">
-              <div className="text-3xl md:text-4xl font-bold">23:00</div>
-              <div className="text-xl md:text-2xl font-bold">FORO NORMANDIE</div>
-            </div>
-
-            <Separator className="h-[2px] bg-black mb-6" />
-
-            {/* Date */}
-            <div className="flex justify-center">
-              <div className="text-4xl md:text-5xl lg:text-6xl font-bold">16.08.2025</div>
+              <div className="text-3xl md:text-3xl font-bold">16.08.2025 - 23:00</div>
+              <div className="text-xl md:text-3xl font-bold">INSURGENTES SUR 701</div>
             </div>
           </div>
         </div>
