@@ -61,13 +61,13 @@ const Poster: React.FC = () => {
               <div className="space-y-2 md:order-1 order-2">
                 {/* Artist lineup */}
                 <div className="flex justify-between">
-                  <span className="font-bold text-lg md:text-xl">MURCOF</span>
-                  <span className="text-lg md:text-xl">LIVE</span>
+                  <span className="font-bold text-lg md:text-xl">MURCOF (LIVE)</span>
+                  <span className="text-lg md:text-xl">DE</span>
                 </div>
                 <Separator className="h-[1px] bg-black" />
                 <div className="flex justify-between">
                   <span className="font-bold text-lg md:text-xl">FJAAK</span>
-                  <span className="text-lg md:text-xl">DE</span>
+                  <span className="text-lg md:text-xl">FR</span>
                 </div>
                 <Separator className="h-[1px] bg-black" />
                 <div className="flex justify-between">
