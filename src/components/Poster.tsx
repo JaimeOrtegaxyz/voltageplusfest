@@ -18,13 +18,14 @@ const Poster: React.FC = () => {
   const iframeSrc = "/halftone_animation_640x360_6fps_final.html";
   
   return (
-    <div 
-      className="flex justify-center items-center min-h-screen bg-[#f5f5f5] bg-cover bg-center bg-no-repeat"
+    <div
+      className="fixed inset-0 w-screen h-screen flex justify-center items-center bg-[#f5f5f5] bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{
         backgroundImage: bgImage ? `url('${bgImage}')` : undefined
       }}
     >
-      <div className="w-full max-w-[900px] mx-auto bg-[#f5f5f5] border-2 border-black">
+      {/* Centered and sticky poster card */}
+      <div className="w-full max-w-[900px] mx-auto bg-[#f5f5f5] border-2 border-black transform lg:scale-[0.67] flex-shrink-0">
         {/* Pixelated DIALEKTIK logo */}
         <div className="w-full border-b-2 border-black p-4 bg-black">
           <div className="relative w-full overflow-hidden" style={{
