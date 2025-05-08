@@ -5,8 +5,8 @@ const Poster: React.FC = () => {
   const [bgImage, setBgImage] = useState<string>("");
 
   useEffect(() => {
-    // Generate random number between 1 and 5
-    const randomNum = Math.floor(Math.random() * 5) + 1;
+    // Generate random number between 1 and 4
+    const randomNum = Math.floor(Math.random() * 4) + 1;
     setBgImage(`/BG/${randomNum}.webp`);
   }, []);
 
