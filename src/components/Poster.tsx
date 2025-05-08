@@ -58,30 +58,27 @@ const Poster: React.FC = () => {
 
             {/* Electronic music night */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-              <div>
-                <h3 className="text-3xl md:text-4xl font-bold">ELECTRONIC</h3>
-                <h3 className="text-3xl md:text-4xl font-bold">MUSIC</h3>
-                <h3 className="text-3xl md:text-4xl font-bold">NIGHT</h3>
-              </div>
-              
-              <div className="space-y-2">
+              <div className="space-y-2 md:order-1 order-2">
                 {/* Artist lineup */}
                 <div className="flex justify-between">
                   <span className="font-bold text-lg md:text-xl">MURCOF</span>
                   <span className="text-lg md:text-xl">LIVE</span>
                 </div>
                 <Separator className="h-[1px] bg-black" />
-                
                 <div className="flex justify-between">
                   <span className="font-bold text-lg md:text-xl">FJAAK</span>
                   <span className="text-lg md:text-xl">DE</span>
                 </div>
                 <Separator className="h-[1px] bg-black" />
-                
                 <div className="flex justify-between">
                   <span className="font-bold text-lg md:text-xl">DEBIT</span>
                   <span className="text-lg md:text-xl">MX</span>
                 </div>
+              </div>
+              <div className="md:order-2 order-1 text-right">
+                <h3 className="text-3xl md:text-4xl font-bold transition-all duration-500 cursor-pointer hover:text-white hover:bg-black inline-block px-2 rounded">BOLETOS ⬅</h3>
+                <h3 className="text-3xl md:text-4xl font-bold transition-all duration-500 cursor-pointer hover:text-white hover:bg-black inline-block px-2 rounded">PLAYLIST ⬅</h3>
+                <h3 className="text-3xl md:text-4xl font-bold transition-all duration-500 cursor-pointer hover:text-white hover:bg-black inline-block px-2 rounded">CÓMO LLEGAR ⬅</h3>
               </div>
             </div>
 
