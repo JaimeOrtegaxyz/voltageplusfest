@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Separator } from "./ui/separator";
 
 const Poster: React.FC = () => {
+  const [bgImage, setBgImage] = useState<string>("");
+
+  useEffect(() => {
+    // Generate random number between 1 and 5
+    const randomNum = Math.floor(Math.random() * 5) + 1;
+    setBgImage(`/BG/${randomNum}.webp`);
+  }, []);
+
   /*
    * The animation HTML sits in /public so it is copied verbatim to the
    * build output and is always available at the site root.  We can therefore
@@ -10,10 +18,15 @@ const Poster: React.FC = () => {
   const iframeSrc = "/halftone_animation_640x360_6fps_final.html";
   
   return (
-    <div className="flex justify-center items-center min-h-screen bg-black">
-      <div className="w-full max-w-[900px] mx-auto bg-[#f5f5f5]">
+    <div 
+      className="flex justify-center items-center min-h-screen bg-[#f5f5f5] bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: bgImage ? `url('${bgImage}')` : undefined
+      }}
+    >
+      <div className="w-full max-w-[900px] mx-auto bg-[#f5f5f5] border-2 border-black">
         {/* Pixelated DIALEKTIK logo */}
-        <div className="w-full border-b-2 border-black p-4">
+        <div className="w-full border-b-2 border-black p-4 bg-black">
           <div className="relative w-full overflow-hidden" style={{
             paddingBottom: "56.25%",
             background: "#000" /* Match the animation background color */
