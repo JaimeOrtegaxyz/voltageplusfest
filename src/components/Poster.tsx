@@ -75,10 +75,31 @@ const Poster: React.FC = () => {
                   <span className="text-lg md:text-xl">MX</span>
                 </div>
               </div>
-              <div className="md:order-2 order-1 text-right">
-                <h3 className="text-3xl md:text-4xl font-bold transition-all duration-500 cursor-pointer hover:text-white hover:bg-black inline-block px-2 rounded">BOLETOS ⬅</h3>
-                <h3 className="text-3xl md:text-4xl font-bold transition-all duration-500 cursor-pointer hover:text-white hover:bg-black inline-block px-2 rounded">PLAYLIST ⬅</h3>
-                <h3 className="text-3xl md:text-4xl font-bold transition-all duration-500 cursor-pointer hover:text-white hover:bg-black inline-block px-2 rounded">CÓMO LLEGAR ⬅</h3>
+              <div className="md:order-2 order-1 text-right space-y-0">
+                {['BOLETOS', 'PLAYLIST', 'CÓMO LLEGAR'].map((label, idx) => (
+                  <div
+                    key={label}
+                    className="group inline-flex items-center text-3xl md:text-4xl font-bold transition-all duration-500 cursor-pointer px-2 rounded hover:bg-black"
+                  >
+                    <span
+                      className="transition-colors duration-500 group-hover:text-[#f5f5f5] text-black"
+                    >
+                      {label}
+                    </span>
+                    <span className="relative ml-2 h-[0.9em] w-[0.9em] inline-block">
+                      <img
+                        src="/left_arrow_black.svg"
+                        alt="arrow"
+                        className="absolute inset-0 h-full w-full transition-opacity duration-500 opacity-100 group-hover:opacity-0 pointer-events-none"
+                      />
+                      <img
+                        src="/left_arrow_f5f5f5.svg"
+                        alt="arrow hover"
+                        className="absolute inset-0 h-full w-full transition-opacity duration-500 opacity-0 group-hover:opacity-100 pointer-events-none"
+                      />
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
 
