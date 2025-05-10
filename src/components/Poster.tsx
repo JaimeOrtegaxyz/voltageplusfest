@@ -75,7 +75,7 @@ const Poster: React.FC = () => {
                   <span className="text-base sm:text-lg md:text-xl">MX</span>
                 </div>
               </div>
-              <div className="md:order-2 order-1 text-right space-y-2">
+              <div className="md:order-2 order-1 text-right space-y-0">
                 {['BOLETOS', 'PLAYLIST', 'CÓMO LLEGAR'].map((label, idx) => (
                   <div
                     key={label}
