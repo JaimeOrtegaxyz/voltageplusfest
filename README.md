@@ -1,73 +1,88 @@
-# Welcome to your Lovable project
+# Voltage+ Festival Website Blueprint
 
-## Project info
+A **ready-to-use, open-source template** for electronic music festival websites and digital posters.
 
-**URL**: https://lovable.dev/projects/59386727-ce1f-499f-b32e-c1942f9e6774
+[Live Demo → voltageplusfest.vercel.app](https://voltageplusfest.vercel.app/)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## What is this?
 
-**Use Lovable**
+Voltage+ is a modern, desktop-first React template designed for music festivals, events, and digital posters.  
+It's built to be **bold, minimal, and easy to remix**—perfect for organizers, designers, or anyone who wants web presence for their event.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/59386727-ce1f-499f-b32e-c1942f9e6774) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🎛️ Features
 
-**Use your preferred IDE**
+- **Poster-like Layout:**  
+  Big, bold typography and a clean, grid-based structure.
+- **Animated Header:**  
+  Halftone animation (standalone, reusable HTML/JS in `/public`).
+- **SVG Arrows:**  
+  Custom, themeable SVG navigation arrows with smooth transitions.
+- **Easy Customization:**  
+  Change event details, colors, and assets.
+- **Accessible & Fast:**  
+  Semantic HTML, keyboard navigation, and instant load with Vite.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🛠️ Tech Stack
 
-Follow these steps:
+- **React** + **Vite** (lightning-fast dev)
+- **Tailwind CSS** (utility-first styling)
+- **shadcn/ui** + **Radix UI** (accessible UI primitives)
+- **Standalone HTML/JS animation** (can be used in any project)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🚀 Quick Start
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+git clone https://github.com/yourusername/voltageplusfest.git
+cd voltageplusfest
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🖌️ Customizing
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Event Info:**  
+  Edit `src/components/Poster.tsx` for lineup, links, and details.
+- **Animation:**  
+  The animated header is `/public/halftone_animation_640x360_6fps_final.html`—use it anywhere.
+- **Branding:**  
+  Swap SVGs in `/public`, tweak colors in Tailwind config, or adjust fonts as you like.
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 📱 Mobile & Desktop
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Mobile:**  
+  No scaling down, big headings, and vertical scroll for a true poster feel.
+- **Desktop:**  
+  Centered, scaled card for a classic web poster look.
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/59386727-ce1f-499f-b32e-c1942f9e6774) and click on Share -> Publish.
+## 🧩 Reuse & License
 
-## Can I connect a custom domain to my Lovable project?
+- **Open Source:**  
+  Use, remix, and share for any event or project.
+- **Animation:**  
+  The animation is a standalone script—drop it into any HTML page.
+- **Contributions welcome!**
 
-Yes it is!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🙏 Credits
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Made with love.  
+Feel free to fork, remix, and make it your own.
+
+---
