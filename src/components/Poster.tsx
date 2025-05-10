@@ -19,7 +19,7 @@ const Poster: React.FC = () => {
   
   return (
     <div
-      className="fixed inset-0 w-screen h-screen flex justify-center items-center bg-[#f5f5f5] bg-cover bg-center bg-no-repeat overflow-x-hidden overflow-y-auto"
+      className="fixed inset-0 w-screen h-screen flex justify-center items-center bg-[#f5f5f5] bg-cover bg-center bg-no-repeat overflow-hidden lg:overflow-hidden overflow-y-auto"
       style={{
         backgroundImage: bgImage ? `url('${bgImage}')` : undefined
       }}
@@ -47,13 +47,13 @@ const Poster: React.FC = () => {
         {/* New minimalist design content */}
         <div>
           {/* VOLTAGE CDMX Header - align padding with content below */}
-          <div className="px-4 py-4 md:px-8 md:py-8 mb-0">
-            <h1 className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-bold tracking-tight leading-none w-full">VOLTAGE+</h1>
-            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] font-bold tracking-tight leading-none w-full">CDMX</h2>
+          <div className="px-4 py-4 md:px-8 md:py-8 lg:px-12 lg:py-8 mb-0">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl lg:text-[10rem] font-bold tracking-tight leading-none w-full">VOLTAGE+</h1>
+            <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl lg:text-[7rem] font-bold tracking-tight leading-none w-full">CDMX</h2>
           </div>
           
           {/* Rest of content with normal padding */}
-          <div className="px-4 pb-4 md:px-8 md:pb-8">
+          <div className="px-4 pb-4 md:px-8 md:pb-8 lg:px-12 lg:pb-8">
             <Separator className="h-[2px] bg-black mb-6" />
 
             {/* Electronic music night */}
@@ -61,45 +61,45 @@ const Poster: React.FC = () => {
               <div className="space-y-2 md:order-1 order-2">
                 {/* Artist lineup */}
                 <div className="flex justify-between">
-                  <span className="font-bold text-lg md:text-xl">MURCOF (LIVE)</span>
-                  <span className="text-lg md:text-xl">DE</span>
+                  <span className="font-bold text-base sm:text-lg md:text-xl">MURCOF (LIVE)</span>
+                  <span className="text-base sm:text-lg md:text-xl">DE</span>
                 </div>
                 <Separator className="h-[1px] bg-black" />
                 <div className="flex justify-between">
-                  <span className="font-bold text-lg md:text-xl">FJAAK</span>
-                  <span className="text-lg md:text-xl">FR</span>
+                  <span className="font-bold text-base sm:text-lg md:text-xl">FJAAK</span>
+                  <span className="text-base sm:text-lg md:text-xl">FR</span>
                 </div>
                 <Separator className="h-[1px] bg-black" />
                 <div className="flex justify-between">
-                  <span className="font-bold text-lg md:text-xl">DEBIT</span>
-                  <span className="text-lg md:text-xl">MX</span>
+                  <span className="font-bold text-base sm:text-lg md:text-xl">DEBIT</span>
+                  <span className="text-base sm:text-lg md:text-xl">MX</span>
                 </div>
               </div>
-              <div className="md:order-2 order-1">
-                {/* Mobile grid for action buttons */}
-                <div className="grid grid-cols-2 gap-2 md:flex md:flex-col md:text-right md:space-y-2">
-                  <div className="group flex items-center justify-center text-2xl md:text-4xl font-bold transition-all duration-500 cursor-pointer px-2 rounded hover:bg-black">
-                    <span className="transition-colors duration-500 group-hover:text-[#f5f5f5] text-black">BOLETOS</span>
+              <div className="md:order-2 order-1 text-right space-y-2">
+                {['BOLETOS', 'PLAYLIST', 'CÓMO LLEGAR'].map((label, idx) => (
+                  <div
+                    key={label}
+                    className="group inline-flex items-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold transition-all duration-500 cursor-pointer px-2 rounded hover:bg-black"
+                  >
+                    <span
+                      className="transition-colors duration-500 group-hover:text-[#f5f5f5] text-black"
+                    >
+                      {label}
+                    </span>
                     <span className="relative ml-2 h-[0.9em] w-[0.9em] inline-block">
-                      <img src="/left_arrow_black.svg" alt="arrow" className="absolute inset-0 h-full w-full transition-opacity duration-500 opacity-100 group-hover:opacity-0 pointer-events-none" />
-                      <img src="/left_arrow_f5f5f5.svg" alt="arrow hover" className="absolute inset-0 h-full w-full transition-opacity duration-500 opacity-0 group-hover:opacity-100 pointer-events-none" />
+                      <img
+                        src="/left_arrow_black.svg"
+                        alt="arrow"
+                        className="absolute inset-0 h-full w-full transition-opacity duration-500 opacity-100 group-hover:opacity-0 pointer-events-none"
+                      />
+                      <img
+                        src="/left_arrow_f5f5f5.svg"
+                        alt="arrow hover"
+                        className="absolute inset-0 h-full w-full transition-opacity duration-500 opacity-0 group-hover:opacity-100 pointer-events-none"
+                      />
                     </span>
                   </div>
-                  <div className="group flex items-center justify-center text-2xl md:text-4xl font-bold transition-all duration-500 cursor-pointer px-2 rounded hover:bg-black">
-                    <span className="transition-colors duration-500 group-hover:text-[#f5f5f5] text-black">PLAYLIST</span>
-                    <span className="relative ml-2 h-[0.9em] w-[0.9em] inline-block">
-                      <img src="/left_arrow_black.svg" alt="arrow" className="absolute inset-0 h-full w-full transition-opacity duration-500 opacity-100 group-hover:opacity-0 pointer-events-none" />
-                      <img src="/left_arrow_f5f5f5.svg" alt="arrow hover" className="absolute inset-0 h-full w-full transition-opacity duration-500 opacity-0 group-hover:opacity-100 pointer-events-none" />
-                    </span>
-                  </div>
-                  <div className="group flex items-center justify-center col-span-2 text-2xl md:text-4xl font-bold transition-all duration-500 cursor-pointer px-2 rounded hover:bg-black">
-                    <span className="transition-colors duration-500 group-hover:text-[#f5f5f5] text-black">CÓMO LLEGAR</span>
-                    <span className="relative ml-2 h-[0.9em] w-[0.9em] inline-block">
-                      <img src="/left_arrow_black.svg" alt="arrow" className="absolute inset-0 h-full w-full transition-opacity duration-500 opacity-100 group-hover:opacity-0 pointer-events-none" />
-                      <img src="/left_arrow_f5f5f5.svg" alt="arrow hover" className="absolute inset-0 h-full w-full transition-opacity duration-500 opacity-0 group-hover:opacity-100 pointer-events-none" />
-                    </span>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
 
@@ -107,8 +107,8 @@ const Poster: React.FC = () => {
 
             {/* Time and venue */}
             <div className="flex justify-between items-center mb-6">
-              <div className="text-3xl md:text-3xl font-bold">16.08.2025 - 23:00</div>
-              <div className="text-xl md:text-3xl font-bold">INSURGENTES SUR 701</div>
+              <div className="text-lg sm:text-xl md:text-3xl font-bold">16.08.2025 - 23:00</div>
+              <div className="text-base sm:text-xl md:text-3xl font-bold">INSURGENTES SUR 701</div>
             </div>
           </div>
         </div>
