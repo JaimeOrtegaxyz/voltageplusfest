@@ -19,13 +19,13 @@ const Poster: React.FC = () => {
   
   return (
     <div
-      className="fixed inset-0 w-screen h-screen flex justify-center items-center bg-[#f5f5f5] bg-cover bg-center bg-no-repeat overflow-hidden"
+      className="fixed inset-0 w-screen h-screen flex justify-center items-center bg-[#f5f5f5] bg-cover bg-center bg-no-repeat overflow-x-hidden overflow-y-auto"
       style={{
         backgroundImage: bgImage ? `url('${bgImage}')` : undefined
       }}
     >
       {/* Centered and sticky poster card */}
-      <div className="w-full max-w-[900px] mx-auto bg-[#f5f5f5] border-2 border-black transform lg:scale-[0.67] flex-shrink-0">
+      <div className="w-full max-w-[900px] mx-auto bg-[#f5f5f5] border-2 border-black flex-shrink-0 lg:scale-[0.67]">
         {/* Pixelated DIALEKTIK logo */}
         <div className="w-full border-b-2 border-black p-4 bg-black">
           <div className="relative w-full overflow-hidden" style={{
@@ -47,13 +47,13 @@ const Poster: React.FC = () => {
         {/* New minimalist design content */}
         <div>
           {/* VOLTAGE CDMX Header - align padding with content below */}
-          <div className="px-8 md:px-12 py-8 mb-0">
+          <div className="px-4 py-4 md:px-8 md:py-8 mb-0">
             <h1 className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-bold tracking-tight leading-none w-full">VOLTAGE+</h1>
             <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] font-bold tracking-tight leading-none w-full">CDMX</h2>
           </div>
           
           {/* Rest of content with normal padding */}
-          <div className="px-8 md:px-12 pb-8">
+          <div className="px-4 pb-4 md:px-8 md:pb-8">
             <Separator className="h-[2px] bg-black mb-6" />
 
             {/* Electronic music night */}
@@ -75,31 +75,31 @@ const Poster: React.FC = () => {
                   <span className="text-lg md:text-xl">MX</span>
                 </div>
               </div>
-              <div className="md:order-2 order-1 text-right space-y-0">
-                {['BOLETOS', 'PLAYLIST', 'CÓMO LLEGAR'].map((label, idx) => (
-                  <div
-                    key={label}
-                    className="group inline-flex items-center text-3xl md:text-4xl font-bold transition-all duration-500 cursor-pointer px-2 rounded hover:bg-black"
-                  >
-                    <span
-                      className="transition-colors duration-500 group-hover:text-[#f5f5f5] text-black"
-                    >
-                      {label}
-                    </span>
+              <div className="md:order-2 order-1">
+                {/* Mobile grid for action buttons */}
+                <div className="grid grid-cols-2 gap-2 md:flex md:flex-col md:text-right md:space-y-2">
+                  <div className="group flex items-center justify-center text-2xl md:text-4xl font-bold transition-all duration-500 cursor-pointer px-2 rounded hover:bg-black">
+                    <span className="transition-colors duration-500 group-hover:text-[#f5f5f5] text-black">BOLETOS</span>
                     <span className="relative ml-2 h-[0.9em] w-[0.9em] inline-block">
-                      <img
-                        src="/left_arrow_black.svg"
-                        alt="arrow"
-                        className="absolute inset-0 h-full w-full transition-opacity duration-500 opacity-100 group-hover:opacity-0 pointer-events-none"
-                      />
-                      <img
-                        src="/left_arrow_f5f5f5.svg"
-                        alt="arrow hover"
-                        className="absolute inset-0 h-full w-full transition-opacity duration-500 opacity-0 group-hover:opacity-100 pointer-events-none"
-                      />
+                      <img src="/left_arrow_black.svg" alt="arrow" className="absolute inset-0 h-full w-full transition-opacity duration-500 opacity-100 group-hover:opacity-0 pointer-events-none" />
+                      <img src="/left_arrow_f5f5f5.svg" alt="arrow hover" className="absolute inset-0 h-full w-full transition-opacity duration-500 opacity-0 group-hover:opacity-100 pointer-events-none" />
                     </span>
                   </div>
-                ))}
+                  <div className="group flex items-center justify-center text-2xl md:text-4xl font-bold transition-all duration-500 cursor-pointer px-2 rounded hover:bg-black">
+                    <span className="transition-colors duration-500 group-hover:text-[#f5f5f5] text-black">PLAYLIST</span>
+                    <span className="relative ml-2 h-[0.9em] w-[0.9em] inline-block">
+                      <img src="/left_arrow_black.svg" alt="arrow" className="absolute inset-0 h-full w-full transition-opacity duration-500 opacity-100 group-hover:opacity-0 pointer-events-none" />
+                      <img src="/left_arrow_f5f5f5.svg" alt="arrow hover" className="absolute inset-0 h-full w-full transition-opacity duration-500 opacity-0 group-hover:opacity-100 pointer-events-none" />
+                    </span>
+                  </div>
+                  <div className="group flex items-center justify-center col-span-2 text-2xl md:text-4xl font-bold transition-all duration-500 cursor-pointer px-2 rounded hover:bg-black">
+                    <span className="transition-colors duration-500 group-hover:text-[#f5f5f5] text-black">CÓMO LLEGAR</span>
+                    <span className="relative ml-2 h-[0.9em] w-[0.9em] inline-block">
+                      <img src="/left_arrow_black.svg" alt="arrow" className="absolute inset-0 h-full w-full transition-opacity duration-500 opacity-100 group-hover:opacity-0 pointer-events-none" />
+                      <img src="/left_arrow_f5f5f5.svg" alt="arrow hover" className="absolute inset-0 h-full w-full transition-opacity duration-500 opacity-0 group-hover:opacity-100 pointer-events-none" />
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
 
