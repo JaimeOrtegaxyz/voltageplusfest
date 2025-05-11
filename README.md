@@ -82,7 +82,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ## 🙏 Credits
 
-Made with love.  
+Made with love while I was bored.  
 Feel free to fork, remix, and make it your own.
 
 ---
