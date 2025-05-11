@@ -3,11 +3,17 @@ import { Separator } from "./ui/separator";
 
 const Poster: React.FC = () => {
   const [bgImage, setBgImage] = useState<string>("");
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Generate random number between 1 and 4
     const randomNum = Math.floor(Math.random() * 4) + 1;
     setBgImage(`/BG/${randomNum}.webp`);
+    
+    // Trigger fade-in animation after component mounts
+    setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
   }, []);
 
   /*
@@ -25,7 +31,13 @@ const Poster: React.FC = () => {
       }}
     >
       {/* Centered and sticky poster card */}
-      <div className="w-full max-w-[900px] mx-auto bg-[#f5f5f5] border-2 border-black flex-shrink-0 lg:scale-[0.67]">
+      <div 
+        className="w-full max-w-[900px] mx-auto bg-[#f5f5f5] border-2 border-black flex-shrink-0 lg:scale-[0.67]"
+        style={{
+          opacity: isVisible ? 1 : 0,
+          transition: 'opacity 2000ms ease-in-out'
+        }}
+      >
         {/* Pixelated DIALEKTIK logo */}
         <div className="w-full border-b-2 border-black p-4 bg-black">
           <div className="relative w-full overflow-hidden" style={{
