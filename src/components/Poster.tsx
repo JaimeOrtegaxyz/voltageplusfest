@@ -25,7 +25,7 @@ const Poster: React.FC = () => {
   
   return (
     <div
-      className="fixed inset-0 w-screen h-screen flex justify-center items-center bg-[#f5f5f5] bg-cover bg-center bg-no-repeat overflow-hidden lg:overflow-hidden overflow-y-auto px-[10%] md:px-0"
+      className="fixed inset-0 w-screen h-screen flex justify-center items-center bg-[#f5f5f5] bg-cover bg-center bg-no-repeat overflow-hidden lg:overflow-hidden overflow-y-auto px-[7%] md:px-0"
       style={{
         backgroundImage: bgImage ? `url('${bgImage}')` : undefined
       }}
@@ -60,16 +60,16 @@ const Poster: React.FC = () => {
         <div>
           {/* VOLTAGE CDMX Header - align padding with content below */}
           <div className="px-4 py-4 md:px-8 md:py-8 lg:px-12 lg:py-8 mb-0">
-            <h1 className="text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl lg:text-[10rem] font-bold tracking-tight leading-none w-full">VOLTAGE+</h1>
-            <h2 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl lg:text-[7rem] font-bold tracking-tight leading-none w-full">CDMX</h2>
+            <h1 className="text-7xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl lg:text-[10rem] font-bold tracking-tight leading-none w-full">VOLTAGE+</h1>
+            <h2 className="text-5xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl lg:text-[4.5rem] font-bold tracking-tight leading-none w-full">CDMX</h2>
           </div>
           
           {/* Rest of content with normal padding */}
-          <div className="px-4 pb-4 md:px-8 md:pb-8 lg:px-12 lg:pb-8">
-            <Separator className="h-[2px] bg-black mb-6" />
+          <div className="px-4 pb-2 md:pb-4 md:px-8 md:pb-8 lg:px-12 lg:pb-8">
+            <Separator className="h-[2px] bg-black mb-3 md:mb-6" />
 
             {/* Electronic music night */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 mb-3 md:mb-6">
               <div className="space-y-2 md:order-1 order-2">
                 {/* Artist lineup */}
                 <div className="flex justify-between">
@@ -115,10 +115,10 @@ const Poster: React.FC = () => {
               </div>
             </div>
 
-            <Separator className="h-[2px] bg-black mb-6" />
+            <Separator className="h-[2px] bg-black mb-3 md:mb-6" />
 
             {/* Time and venue */}
-            <div className="flex justify-between items-center mb-6">
+            <div className="flex justify-between items-center mb-3 md:mb-6">
               <div className="text-lg sm:text-xl md:text-3xl font-bold">16.08.2025 - 23:00</div>
               <div className="text-base sm:text-xl md:text-3xl font-bold">INSURGENTES SUR 701</div>
             </div>
