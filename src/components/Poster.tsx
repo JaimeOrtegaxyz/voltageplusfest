@@ -25,7 +25,7 @@ const Poster: React.FC = () => {
   
   return (
     <div
-      className="fixed inset-0 w-screen h-screen flex justify-center items-center bg-[#f5f5f5] bg-cover bg-center bg-no-repeat overflow-hidden lg:overflow-hidden overflow-y-auto"
+      className="fixed inset-0 w-screen h-screen flex justify-center items-center bg-[#f5f5f5] bg-cover bg-center bg-no-repeat overflow-hidden lg:overflow-hidden overflow-y-auto px-[10%] md:px-0"
       style={{
         backgroundImage: bgImage ? `url('${bgImage}')` : undefined
       }}
