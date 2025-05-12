@@ -59,9 +59,9 @@ const Poster: React.FC = () => {
         {/* New minimalist design content */}
         <div>
           {/* VOLTAGE CDMX Header - align padding with content below */}
-          <div className="px-4 py-4 md:px-8 md:py-8 lg:px-12 lg:py-8 mb-0">
-            <h1 className="text-7xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl lg:text-[10rem] font-bold tracking-tight leading-none w-full">VOLTAGE+</h1>
-            <h2 className="text-5xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl lg:text-[4.5rem] font-bold tracking-tight leading-none w-full">CDMX</h2>
+          <div className="px-4 py-4 md:px-8 md:py-8 lg:px-12 lg:py-8 mb-0 max-w-full overflow-hidden">
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl lg:text-[10rem] font-bold tracking-tight leading-none w-full">VOLTAGE+</h1>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl lg:text-[4.5rem] font-bold tracking-tight leading-none w-full">CDMX</h2>
           </div>
           
           {/* Rest of content with normal padding */}
