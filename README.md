@@ -17,8 +17,15 @@ It's built to be **bold, minimal, and easy to remix**—perfect for organizers, 
 
 - **Poster-like Layout:**  
   Big, bold typography and a clean, grid-based structure.
-- **Animated Header:**  
-  Halftone animation (standalone, reusable HTML/JS in `/public`).
+- **Dynamic Halftone Animation:** 
+  Standalone HTML/JS header animation featuring a multi-layered, randomized pattern-shifting effect that creates unique visuals on each page load.
+  - **Number of Layers (K):** Controls how many different offset patterns are applied simultaneously (`numOffsetLayers`).
+  - **Dots per Layer (M):** Controls how many dots are included in the random subset for each layer (`dotsPerLayer`).
+  - **Customization Options:**
+    - `allowedKValues`: Array of possible layer counts (e.g., `[0, 1, 2, 3]`). Set to `[3]` to fix K.
+    - `allowedMValues`: Array of possible dots per layer (e.g., `[50, 100, 500, 1000]`). Set to `[100]` to fix M.
+    - `updateIntervalFrames`: Frame rate for pattern updates (lower = more frequent changes).
+  - **Performance Note:** Higher K values increase visual complexity and per-frame cost. Higher M values create denser patterns with higher update costs.
 - **SVG Arrows:**  
   Custom, themeable SVG navigation arrows with smooth transitions.
 - **Easy Customization:**  
@@ -55,7 +62,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 - **Event Info:**  
   Edit `src/components/Poster.tsx` for lineup, links, and details.
 - **Animation:**  
-  The animated header is `/public/halftone_animation_640x360_6fps_final.html`—use it anywhere.
+  The animated header is `/public/halftone_animation.html`—use it anywhere.
 - **Branding:**  
   Swap SVGs in `/public`, tweak colors in Tailwind config, or adjust fonts as you like.
 
